@@ -12,7 +12,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "render": "routine-design render ./test/render"
+    "render": "routine-design render ./test/render",
+    "postinstall": "docker pull lynnmercier/routine-design && routine-design docker build-node-sass",
+    "capture": "routine-design capture ./test/render gcp-project-id my-app-screenshots-12345",
+    "test:screenshots": "routine-design test ./test/render gcp-project-id my-app-screenshots-12345"
   },
   "eslintConfig": {
     "extends": "react-app"
